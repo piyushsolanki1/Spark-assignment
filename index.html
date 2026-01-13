@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tailwind Test</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        @theme {
+      --color-clifford: #da373d;
+    }
+  </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <section>
+        <header class="w-full bg-white border-b border-gray-100 sticky">
+            <div class="max-w-full mx-auto px-6 sm:px-8 lg:px-16 py-4">
+                <div class="flex items-center justify-between">
+
+                    <div class="text-xl sm:text-2xl text-gray-900 font-bold">
+                        Spark Que Tech Solutions
+                    </div>
+
+                    <nav class="hidden md:flex items-center gap-8">
+                        <a href="#home" class="text-gray-600 hover:text-blue-600 transition-colors">
+                            Home
+                        </a>
+                        <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">
+                            Services
+                        </a>
+                        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors">
+                            Contact
+                        </a>
+                    </nav>
+
+                    <button id="menuBtn"
+                        class="md:hidden flex items-center justify-center w-10 h-10 rounded-md border border-gray-200 text-gray-700 hover:bg-gray-100 transition">
+                        ☰
+                    </button>
+
+                </div>
+
+                <div id="mobileMenu"
+                    class="md:hidden hidden absolute text-center left-0 right-0 top-full mt-2 bg-white border border-gray-100 shadow-lg">
+
+                    <nav class="flex flex-col divide-y">
+                        <a href="#home" class="px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            Home
+                        </a>
+                        <a href="#services" class="px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            Services
+                        </a>
+                        <a href="#contact" class="px-4 py-3 text-gray-700 hover:bg-gray-50">
+                            Contact
+                        </a>
+                    </nav>
+                </div>
+
+            </div>
+        </header>
+
+    </section>
+
+    <!-- hero -->
+    <section id="home" class="w-full bg-gradient-to-b from-blue-50/30 to-white py-12 sm:py-20 lg:py-28">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+
+                <div class="space-y-6 sm:space-y-8">
+                    <div class="space-y-4">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl tracking-tight text-gray-900">
+                            Spark Que Tech Solutions
+                        </h1>
+                        <p class="text-xl sm:text-2xl text-blue-600">
+                            Our wish to accomplish your wish.
+                        </p>
+                        <p class="text-base sm:text-lg text-gray-600 max-w-xl">
+                            Empowering businesses with innovative IT services and digital solutions.
+                            We transform ideas into reality with cutting-edge technology and expert consulting.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="bg-blue-700 hover:bg-blue-800 text-white px-8 py-5 text-base font-medium rounded-2xl shadow-lg transition-colors flex items-center justify-center">
+                            Get Free Consultation
+                        </button>
+                    </div>
+                </div>
+
+                <div class="relative w-full">
+                    <div class="w-full aspect-[4/3] sm:aspect-[16/10] rounded-2xl overflow-hidden shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1646153976497-14925728ff47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                            alt="Modern office technology" class="w-full h-full object-cover" />
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section class="w-full py-16 sm:py-20 lg:py-24 bg-gray-100">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-gray-900">
+                    About Us
+                </h2>
+                <p class="text-base sm:text-lg text-gray-600 leading-relaxed">
+                    Spark Que Tech Solutions is a forward-thinking IT services company dedicated to helping businesses
+                    thrive in the digital age. We specialize in web development, digital transformation, data analytics,
+                    and IT staff augmentation. Our team of skilled professionals brings years of expertise to deliver
+                    tailored solutions that drive growth and efficiency.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- services -->
+    <section id="services" class="w-full py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16">
+
+            <div class="text-center space-y-4 mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-gray-900">
+                    Our Services
+                </h2>
+                <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                    Comprehensive IT solutions designed to accelerate your business growth
+                </p>
+            </div>
+
+            <div id="servicesGrid" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- why us -->
+    <section class="w-full py-16 sm:py-20 lg:py-24 bg-white">
+        <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-16">
+
+            <div class="text-center space-y-4 mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-gray-900">
+                    Why Choose Us
+                </h2>
+                <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                    Partner with a team that's committed to your success
+                </p>
+            </div>
+
+            <div id="benefitsGrid" class="grid sm:grid-cols-2 gap-6 sm:gap-8 max-w-4xl mx-auto">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="w-full py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div class="max-w-full mx-auto px-6 sm:px-8 lg:px-16">
+            <div class="text-center space-y-4 mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl tracking-tight text-gray-900">
+                    Get In Touch
+                </h2>
+                <p class="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                    Ready to transform your business? Let's start a conversation.
+                </p>
+            </div>
+
+            <div class="max-w-2xl mx-auto p-8 sm:p-10 bg-white border border-gray-200 rounded-lg">
+                <form id="contactForm" class="space-y-6">
+
+                    <div class="space-y-2">
+                        <label for="name" class="block text-sm font-medium text-gray-700">
+                            Name
+                        </label>
+                        <input id="name" name="name" type="text" placeholder="Your full name" required
+                            class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="email" class="block text-sm font-medium text-gray-700">
+                            Email
+                        </label>
+                        <input id="email" name="email" type="email" placeholder="your.email@example.com" required
+                            class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="phone" class="block text-sm font-medium text-gray-700">
+                            Phone
+                        </label>
+                        <input id="phone" name="phone" type="tel" placeholder="+91 (989) 000-0000" required
+                            class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                    </div>
+
+                    <div class="space-y-2">
+                        <label for="message" class="block text-sm font-medium text-gray-700">
+                            Message
+                        </label>
+                        <textarea id="message" name="message" rows="5"
+                            placeholder="Tell us about your project or inquiry..." required
+                            class="w-full px-4 py-2 bg-gray-50 border border-gray-200 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                    </div>
+
+                    <button type="submit"
+                        class="w-full flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-md transition">
+                        Send Message
+                        <span>➤</span>
+                    </button>
+
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="contact.js"></script>
+
+
+    <!-- FOOTER -->
+    <footer class="w-full py-12 bg-gray-800 text-white">
+        <div class="max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-16">
+            <div class="flex flex-col items-center space-y-6 text-center">
+                <div class="text-xl tracking-tight font-medium">
+                    Spark Que Tech Solutions
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <img src="images/icons/linkedin.png" alt="LinkedIn" class="size-7" />
+                    </a>
+
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <img src="images/icons/twitter.png" alt="Twitter" class="size-7" />
+                    </a>
+
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <img src="images/icons/instagram.png" alt="Instagram" class="size-7" />
+                    </a>
+                </div>
+
+                <div class="text-sm text-gray-400">
+                    © 2026 Spark Que Tech Solutions. All rights reserved.
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
